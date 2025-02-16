@@ -1,9 +1,9 @@
 import createHttpError from 'http-errors';
-import { UsersCollection } from '../db/models/user.js';
+import { UsersCollection } from '../models/user.js';
 import brcypt from 'bcrypt';
 import { randomBytes } from 'crypto';
 import { FIFTEEN_MINUTES, ONE_DAY } from '../constants/index.js';
-import { SessionsCollection } from '../db/models/session.js';
+import { SessionsCollection } from '../models/session.js';
 
 const createSession = () => {
   const accessToken = randomBytes(30).toString('base64');
